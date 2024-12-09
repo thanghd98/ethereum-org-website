@@ -2406,7 +2406,7 @@ export const walletsData: WalletData[] = [
     documentation: "https://docs.coin98.com/",
     supported_chains: ["Ethereum Mainnet"],
   },
-]
+] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
 export type WalletName = (typeof walletsData)[number]["name"]
 
